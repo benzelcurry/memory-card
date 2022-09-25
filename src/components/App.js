@@ -5,7 +5,7 @@ import '../stylesheets/App.css';
 function App() {
   return (
     <div className='app'>
-      <Header />
+      <Header current='24' best='31'/>
       <Cards />
     </div>
   );

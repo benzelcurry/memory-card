@@ -1,7 +1,21 @@
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   height: 150px;
   background-color: rgb(78, 78, 124);
   align-items: center;
-  justify-content: center;
+  justify-items: end;
+}
+
+.title {
+  display: flex;
+  font-size: 40px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 20px;
+  margin-right: 100px;
 }
