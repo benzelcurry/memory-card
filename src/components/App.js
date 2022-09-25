@@ -2,10 +2,10 @@ import Header from './Header';
 import Cards from './Cards';
 import '../stylesheets/App.css';
 
-function App() {
+function App(props) {
   return (
     <div className='app'>
-      <Header current='24' best='31'/>
+      <Header current={17} best='31'/>
       <Cards />
     </div>
   );
