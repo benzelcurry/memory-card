@@ -51,6 +51,14 @@ const Cards = () => {
     if (hasBeenClicked(Number(e.target.id))) {
       setScore(0);
       stopBest = true;
+
+      // Makes all cards clickable again
+      for (let i = 0; i < Object.keys(cards).length; i++) {
+        let obj = cards;
+        obj[i] = false;
+        setCards(obj);
+      }
+
     } else {
       setScore(score + 1);
       stopBest = false;
