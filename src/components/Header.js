@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../stylesheets/Header.css';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className='header'>
-      <div className='title'>Memory Card Game</div>
+      <div className='title'>Emoji Memory Game</div>
+      <div className='rules'>Rules: Don't click the same card twice!</div>
     </div>
   )
 }

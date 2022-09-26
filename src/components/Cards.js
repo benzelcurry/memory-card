@@ -52,7 +52,7 @@ const Cards = () => {
       setScore(0);
       stopBest = true;
 
-      // Makes all cards clickable again
+      // Makes all cards clickable again after user loses
       for (let i = 0; i < Object.keys(cards).length; i++) {
         let obj = cards;
         obj[i] = false;
@@ -65,6 +65,10 @@ const Cards = () => {
     }
 
     if ((best === 0 || best <= score) && stopBest === false) {
+      if (best + 1 === 12) {
+        alert('You win! Click another card to start over.');
+      }
+
       setBest(best + 1);
     }
 
@@ -81,6 +85,51 @@ const Cards = () => {
     }
   }
 
+  const emoji = (index) => {
+    switch(index) {
+      case 1:
+        return '🤪';
+      case 2:
+        return '💀';
+      case 3:
+        return '💩';
+      case 4:
+        return '😈';
+      case 5:
+        return '🥶';
+      case 6:
+        return '🤠';
+      case 7:
+        return '👺';
+      case 8:
+        return '🤡';
+      case 9:
+        return '👁';
+      case 10:
+        return '💯';
+      case 11:
+        return '😎';
+      case 12:
+        return '🤢';
+      default:
+        break;
+    }
+  }
+
+    // let [cardArr, setCardArr] = useState({
+  //   1: '🤪',
+  //   2: '💀',
+  //   3: '💩',
+  //   4: '😈',
+  //   5: '🥶',
+  //   6: '🤠',
+  //   7: '👺',
+  //   8: '🤡',
+  //   9: '👁',
+  //   10: '💯',
+  //   11: '😎',
+  //   12: '🤢'
+  // });
 
 
   return (
@@ -90,18 +139,18 @@ const Cards = () => {
         <div className="best">Best: {best}</div>
       </div>
       <div className='body'>
-            <div className="card" onClick={handleClick} id={cardArr[0]}>Card {cardArr[0]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[1]}>Card {cardArr[1]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[2]}>Card {cardArr[2]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[3]}>Card {cardArr[3]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[4]}>Card {cardArr[4]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[5]}>Card {cardArr[5]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[6]}>Card {cardArr[6]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[7]}>Card {cardArr[7]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[8]}>Card {cardArr[8]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[9]}>Card {cardArr[9]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[10]}>Card {cardArr[10]}</div>
-            <div className="card" onClick={handleClick} id={cardArr[11]}>Card {cardArr[11]}</div>
+            <div className="card" onClick={handleClick} id={cardArr[0]}>{emoji(cardArr[0])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[1]}>{emoji(cardArr[1])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[2]}>{emoji(cardArr[2])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[3]}>{emoji(cardArr[3])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[4]}>{emoji(cardArr[4])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[5]}>{emoji(cardArr[5])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[6]}>{emoji(cardArr[6])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[7]}>{emoji(cardArr[7])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[8]}>{emoji(cardArr[8])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[9]}>{emoji(cardArr[9])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[10]}>{emoji(cardArr[10])}</div>
+            <div className="card" onClick={handleClick} id={cardArr[11]}>{emoji(cardArr[11])}</div>
           </div>
     </div>
   )

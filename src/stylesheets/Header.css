@@ -1,5 +1,7 @@
 .header {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   min-height: 150px;
   background-color: rgb(78, 78, 124);
   align-items: center;
@@ -9,4 +11,8 @@
 .title {
   display: flex;
   font-size: 40px;
+}
+
+.rules {
+  font-size: 0.9rem;
 }

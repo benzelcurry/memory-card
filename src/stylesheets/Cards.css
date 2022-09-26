@@ -24,7 +24,8 @@
 
 .card {
   border: 3px solid black;
-  background-color: rgb(217, 220, 243);
+  background-color: rgb(157, 163, 209);
+  font-size: 60px;
   border-radius: 5px;
   height: 300px;
   display: flex;
